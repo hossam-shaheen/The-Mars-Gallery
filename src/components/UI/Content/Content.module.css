@@ -1,0 +1,43 @@
+.content {
+  width: 75%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  padding: 40px;
+}
+.mars-images-label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.loading,
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  width: 100%;
+  font-size: 18px;
+}
+.error {
+  color: #e74c3c;
+}
+
+.loading {
+  color: #1abc9c;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}
