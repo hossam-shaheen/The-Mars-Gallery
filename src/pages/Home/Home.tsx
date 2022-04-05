@@ -24,7 +24,6 @@ const Home = () => {
       const response = await fetch(
         `https://api.nasa.gov/mars-photos/api/v1/rovers/${imageType}/photos?sol=1000&page=${currentPage}&api_key=DEMO_KEY`
       );
-
       const { photos } = await response.json();
 
       const marsImages =

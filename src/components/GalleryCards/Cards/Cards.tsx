@@ -7,12 +7,19 @@ const Cards: FunctionComponent<{
     id: number;
     img: string;
   }[];
-}> = ({ marsImages }): JSX.Element => {
+  imageType: string;
+}> = ({ marsImages, imageType }): JSX.Element => {
   return (
     <ul className={classes["cards"]}>
       {marsImages?.length > 0 &&
         marsImages.map((marsImage: { id: number; img: string }) => {
-          return <Card key={marsImage.id} marsImage={marsImage.img} />;
+          return (
+            <Card
+              key={marsImage.id}
+              marsImage={marsImage.img}
+              imageType={imageType}
+            />
+          );
         })}
     </ul>
   );

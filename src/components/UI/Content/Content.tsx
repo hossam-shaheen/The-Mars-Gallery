@@ -17,7 +17,9 @@ const Content: FunctionComponent<{
       <h1 className={classes["mars-images-label"]}>
         Mars Images ({imageType})
       </h1>
-      {marsImages.length > 0 && <Cards marsImages={marsImages} />}
+      {marsImages.length > 0 && (
+        <Cards marsImages={marsImages} imageType={imageType} />
+      )}
       {error && !loading && (
         <p className={classes.error}>{error.errorMessage}</p>
       )}
